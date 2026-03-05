@@ -1,16 +1,15 @@
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ProfileForm } from "@/components/auth/profile-form";
 
-export default function CompleteProfilePage({
+export default async function CompleteProfilePage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const locale = (params as unknown as { locale: string }).locale;
+  const { locale } = await params;
   setRequestLocale(locale);
-  const t = useTranslations("profile");
+  const t = await getTranslations("profile");
 
   return (
     <main className="flex min-h-screen items-center justify-center px-4 py-12">

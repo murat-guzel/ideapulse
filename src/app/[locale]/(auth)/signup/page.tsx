@@ -1,17 +1,16 @@
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { SignupForm } from "@/components/auth/signup-form";
 
-export default function SignupPage({
+export default async function SignupPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const locale = (params as unknown as { locale: string }).locale;
+  const { locale } = await params;
   setRequestLocale(locale);
-  const tc = useTranslations("common");
-  const t = useTranslations("auth");
+  const tc = await getTranslations("common");
+  const t = await getTranslations("auth");
 
   return (
     <main className="flex min-h-screen items-center justify-center px-4">

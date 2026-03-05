@@ -1,15 +1,14 @@
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
-export default function VerifyEmailPage({
+export default async function VerifyEmailPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const locale = (params as unknown as { locale: string }).locale;
+  const { locale } = await params;
   setRequestLocale(locale);
-  const t = useTranslations("auth");
+  const t = await getTranslations("auth");
 
   return (
     <main className="flex min-h-screen items-center justify-center px-4">
