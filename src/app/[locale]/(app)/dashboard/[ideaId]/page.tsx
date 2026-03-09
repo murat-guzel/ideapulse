@@ -79,7 +79,7 @@ export default async function IdeaDetailPage({
         <p className="text-sm text-gray-500 uppercase tracking-wide">
           {t("overallScore")}
         </p>
-        <p className="mt-1 text-5xl font-bold text-indigo-600">
+        <p className="mt-1 text-5xl font-bold text-emerald-600">
           {scores.scoreOverall.toFixed(1)}
         </p>
         <p className="mt-2 text-sm font-medium">

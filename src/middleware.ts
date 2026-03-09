@@ -22,6 +22,8 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    // Root path
+    "/",
     // Match all pathnames except static files and API routes
     "/((?!_next|api|.*\\..*).*)",
   ],

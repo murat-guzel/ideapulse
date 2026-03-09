@@ -38,8 +38,8 @@ function RatingGroup({
             <span
               className={cn(
                 "inline-block rounded-lg border px-3 py-1.5 text-xs font-medium transition-colors",
-                "border-gray-200 text-gray-600 hover:border-indigo-300 hover:bg-indigo-50",
-                "peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white"
+                "border-gray-200 text-gray-600 hover:border-emerald-300 hover:bg-emerald-50",
+                "peer-checked:border-emerald-600 peer-checked:bg-emerald-600 peer-checked:text-white"
               )}
             >
               {opt.label}

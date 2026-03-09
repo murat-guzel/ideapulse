@@ -73,7 +73,7 @@ export function IdeaForm() {
           <div
             key={s}
             className={`h-1.5 flex-1 rounded-full transition-colors ${
-              i <= step ? "bg-indigo-600" : "bg-gray-200"
+              i <= step ? "bg-emerald-600" : "bg-gray-200"
             }`}
           />
         ))}

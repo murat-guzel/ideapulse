@@ -20,7 +20,7 @@ export function LocaleSwitcher() {
         className={cn(
           "rounded-md px-2 py-1 transition-colors",
           locale === "en"
-            ? "bg-indigo-600 text-white"
+            ? "bg-emerald-600 text-white"
             : "text-gray-600 hover:text-gray-900"
         )}
       >
@@ -31,7 +31,7 @@ export function LocaleSwitcher() {
         className={cn(
           "rounded-md px-2 py-1 transition-colors",
           locale === "tr"
-            ? "bg-indigo-600 text-white"
+            ? "bg-emerald-600 text-white"
             : "text-gray-600 hover:text-gray-900"
         )}
       >

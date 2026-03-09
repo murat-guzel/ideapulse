@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "ideapulse-dev",
-      "runtimeExecutable": "/opt/homebrew/bin/node",
+      "runtimeExecutable": "/Users/mguzel/.nvm/versions/node/v20.20.1/bin/node",
       "runtimeArgs": ["node_modules/.bin/next", "dev", "--port", "3001"],
       "port": 3001
     }

@@ -23,11 +23,11 @@ export async function signUp(formData: FormData): Promise<AuthResult | void> {
   const supabase = await createClient();
   const locale = await getLocale();
 
-  const { error } = await supabase.auth.signUp({
+  const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: {
-      emailRedirectTo: `${process.env.NEXT_PUBLIC_SUPABASE_URL ? "" : "http://localhost:3000"}/${locale}/auth/callback`,
+      emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3001"}/${locale}/auth/callback`,
     },
   });
 
@@ -35,6 +35,13 @@ export async function signUp(formData: FormData): Promise<AuthResult | void> {
     return { error: error.message };
   }
 
+  // If email confirmation is disabled, user is immediately confirmed
+  // and we get a session back — redirect to complete-profile
+  if (data?.session) {
+    redirect({ href: "/complete-profile", locale });
+  }
+
+  // Otherwise, email confirmation required — show verify-email page
   redirect({ href: "/verify-email", locale });
 }
 

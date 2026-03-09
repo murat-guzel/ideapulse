@@ -29,7 +29,7 @@ function BarChart({ items, total }: { items: BreakdownItem[]; total: number }) {
             </div>
             <div className="h-1.5 overflow-hidden rounded-full bg-gray-100">
               <div
-                className="h-full rounded-full bg-indigo-400"
+                className="h-full rounded-full bg-emerald-400"
                 style={{ width: `${percent}%` }}
               />
             </div>

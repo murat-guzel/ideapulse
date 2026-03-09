@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { getUserIdeas } from "@/lib/actions/idea";
 import { Card } from "@/components/ui/card";
 import { IdeaStatusBadge } from "@/components/dashboard/idea-status-badge";
@@ -8,7 +8,7 @@ import { EVAL_REQUIRED } from "@/lib/constants";
 
 export default async function DashboardPage() {
   const { ideas } = await getUserIdeas();
-  const t = useTranslations("dashboard");
+  const t = await getTranslations("dashboard");
 
   return (
     <div className="space-y-6">
@@ -28,7 +28,7 @@ export default async function DashboardPage() {
         <div className="space-y-4">
           {ideas.map((idea) => (
             <Link key={idea.id} href={`/dashboard/${idea.id}`}>
-              <Card className="flex items-center justify-between hover:border-indigo-200 transition-colors cursor-pointer">
+              <Card className="flex items-center justify-between hover:border-emerald-200 transition-colors cursor-pointer">
                 <div className="flex-1 space-y-1">
                   <div className="flex items-center gap-2">
                     <h3 className="font-semibold text-gray-900">
@@ -55,7 +55,7 @@ export default async function DashboardPage() {
                 </div>
                 {idea.score_overall !== null && (
                   <div className="ml-4 text-right">
-                    <p className="text-2xl font-bold text-indigo-600">
+                    <p className="text-2xl font-bold text-emerald-600">
                       {idea.score_overall.toFixed(1)}
                     </p>
                     <p className="text-xs text-gray-500">{t("overallScore")}</p>

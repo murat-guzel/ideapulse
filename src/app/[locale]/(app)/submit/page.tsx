@@ -1,4 +1,3 @@
-import { useTranslations } from "next-intl";
 import { getEvaluationProgress } from "@/lib/actions/evaluate";
 import { EVAL_REQUIRED } from "@/lib/constants";
 import { SubmissionGate } from "@/components/submit/submission-gate";
