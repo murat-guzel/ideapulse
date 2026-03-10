@@ -20,6 +20,24 @@ export async function generateMetadata({
   return {
     title: `${t("appName")} — ${t("tagline")}`,
     description: t("tagline"),
+    icons: {
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+      ],
+      apple: "/apple-touch-icon.svg",
+    },
+    metadataBase: new URL("https://ideapulse.co"),
+    openGraph: {
+      title: `${t("appName")} — ${t("tagline")}`,
+      description: t("tagline"),
+      siteName: t("appName"),
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: `${t("appName")} — ${t("tagline")}`,
+      description: t("tagline"),
+    },
   };
 }
 

@@ -4,6 +4,7 @@ import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { LogoIcon } from "@/components/ui/logo";
 
 export function LandingNav() {
   const locale = useLocale();
@@ -35,14 +36,10 @@ export function LandingNav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-            </svg>
-          </div>
+          <LogoIcon />
           <span
             className={cn(
-              "text-lg font-bold transition-colors",
+              "text-lg font-bold tracking-tight transition-colors",
               scrolled ? "text-gray-900" : "text-white"
             )}
           >

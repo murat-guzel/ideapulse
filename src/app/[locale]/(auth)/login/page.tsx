@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { LoginForm } from "@/components/auth/login-form";
+import { Logo } from "@/components/ui/logo";
 
 export default async function LoginPage({
   params,
@@ -16,9 +17,9 @@ export default async function LoginPage({
     <main className="flex min-h-screen items-center justify-center px-4">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <p className="mb-1 text-sm font-semibold text-emerald-600">
-            {tc("appName")}
-          </p>
+          <div className="mb-2">
+            <Logo size="sm" textClassName="text-emerald-600" />
+          </div>
           <CardTitle>{t("login")}</CardTitle>
         </CardHeader>
         <LoginForm />

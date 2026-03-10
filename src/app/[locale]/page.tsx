@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LandingNav } from "@/components/landing/landing-nav";
+import { Logo } from "@/components/ui/logo";
 
 export default async function LandingPage({
   params,
@@ -306,15 +307,8 @@ export default async function LandingPage({
           <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             {/* Brand */}
             <div className="sm:col-span-2 md:col-span-1">
-              <div className="mb-4 flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                  </svg>
-                </div>
-                <span className="text-lg font-bold text-gray-900">
-                  {tc("appName")}
-                </span>
+              <div className="mb-4">
+                <Logo textClassName="text-gray-900" />
               </div>
               <p className="text-sm leading-relaxed text-gray-500">
                 {t("footerDesc")}

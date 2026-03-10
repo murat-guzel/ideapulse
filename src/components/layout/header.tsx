@@ -6,6 +6,7 @@ import { LocaleSwitcher } from "./locale-switcher";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/ui/logo";
 
 interface HeaderProps {
   isAuthenticated: boolean;
@@ -26,8 +27,8 @@ export function Header({ isAuthenticated }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-        <Link href="/" className="text-lg font-bold text-emerald-600">
-          {tc("appName")}
+        <Link href="/" className="flex items-center">
+          <Logo size="sm" textClassName="text-emerald-600" />
         </Link>
 
         <div className="flex items-center gap-4">
