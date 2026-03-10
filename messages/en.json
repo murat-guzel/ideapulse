@@ -116,6 +116,8 @@
     "industry": "Industry",
     "aiSummary": "AI-Generated Summary",
     "aiSummaryDesc": "This summary will be shown to evaluators.",
+    "next": "Next",
+    "back": "Back",
     "submitIdea": "Submit Idea",
     "success": "Idea submitted!",
     "successDesc": "Your idea is now live for 48 hours. Check your dashboard for results."

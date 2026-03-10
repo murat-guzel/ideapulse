@@ -116,6 +116,8 @@
     "industry": "Sektor",
     "aiSummary": "Yapay Zeka Ozeti",
     "aiSummaryDesc": "Bu ozet degerlendirmecilere gosterilecek.",
+    "next": "İleri",
+    "back": "Geri",
     "submitIdea": "Fikri Gonder",
     "success": "Fikir gonderildi!",
     "successDesc": "Fikrin artik 48 saat boyunca yayinda. Sonuclari panelinden takip et."

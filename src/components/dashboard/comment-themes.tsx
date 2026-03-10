@@ -9,8 +9,22 @@ interface CommentThemesProps {
   themes: AiTheme[] | null;
 }
 
-export function CommentThemes({ themes }: CommentThemesProps) {
+export function CommentThemes({ themes: rawThemes }: CommentThemesProps) {
   const t = useTranslations("dashboard");
+
+  // Handle JSONB coming as string from Supabase
+  let themes: AiTheme[] | null = null;
+  if (rawThemes) {
+    if (typeof rawThemes === "string") {
+      try {
+        themes = JSON.parse(rawThemes);
+      } catch {
+        themes = null;
+      }
+    } else if (Array.isArray(rawThemes)) {
+      themes = rawThemes;
+    }
+  }
 
   if (!themes || themes.length === 0) return null;
 
