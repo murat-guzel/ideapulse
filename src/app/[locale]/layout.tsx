@@ -3,6 +3,8 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -57,8 +59,8 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
-      <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+    <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className="min-h-screen bg-gray-50 font-sans text-gray-900 antialiased">
         <NextIntlClientProvider>
           {children}
         </NextIntlClientProvider>

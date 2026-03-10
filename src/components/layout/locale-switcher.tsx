@@ -14,14 +14,14 @@ export function LocaleSwitcher() {
   }
 
   return (
-    <div className="flex items-center gap-1 rounded-lg border border-gray-200 p-0.5 text-xs">
+    <div className="flex items-center gap-0.5 rounded-full border border-gray-200 p-0.5 text-[11px]">
       <button
         onClick={() => switchTo("en")}
         className={cn(
-          "rounded-md px-2 py-1 transition-colors",
+          "rounded-full px-2 py-1 font-medium transition-all",
           locale === "en"
-            ? "bg-emerald-600 text-white"
-            : "text-gray-600 hover:text-gray-900"
+            ? "bg-brand-600 text-white"
+            : "text-gray-500 hover:text-gray-900"
         )}
       >
         EN
@@ -29,10 +29,10 @@ export function LocaleSwitcher() {
       <button
         onClick={() => switchTo("tr")}
         className={cn(
-          "rounded-md px-2 py-1 transition-colors",
+          "rounded-full px-2 py-1 font-medium transition-all",
           locale === "tr"
-            ? "bg-emerald-600 text-white"
-            : "text-gray-600 hover:text-gray-900"
+            ? "bg-brand-600 text-white"
+            : "text-gray-500 hover:text-gray-900"
         )}
       >
         TR

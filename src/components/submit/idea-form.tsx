@@ -68,12 +68,12 @@ export function IdeaForm() {
   return (
     <div className="space-y-6">
       {/* Step indicator */}
-      <div className="flex gap-2">
+      <div className="flex gap-1.5">
         {STEPS.map((s, i) => (
           <div
             key={s}
-            className={`h-1.5 flex-1 rounded-full transition-colors ${
-              i <= step ? "bg-emerald-600" : "bg-gray-200"
+            className={`h-1 flex-1 rounded-full transition-all duration-300 ${
+              i <= step ? "bg-brand-500" : "bg-gray-200"
             }`}
           />
         ))}
@@ -86,7 +86,7 @@ export function IdeaForm() {
         </CardHeader>
 
         {state.error && (
-          <div className="mb-4 rounded-lg bg-red-50 p-3 text-sm text-red-600">
+          <div className="mb-4 rounded-xl bg-red-50 p-3 text-[13px] text-red-600">
             {state.error}
           </div>
         )}
@@ -165,30 +165,30 @@ export function IdeaForm() {
         )}
 
         {step === 4 && (
-          <div className="space-y-3 text-sm">
+          <div className="space-y-3 text-[13px]">
             <div>
-              <p className="font-medium text-gray-500">{t("ideaTitle")}</p>
-              <p className="text-gray-900">{formValues.title}</p>
+              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400">{t("ideaTitle")}</p>
+              <p className="mt-0.5 font-medium text-gray-900">{formValues.title}</p>
             </div>
             <div>
-              <p className="font-medium text-gray-500">{t("problem")}</p>
-              <p className="text-gray-700">{formValues.problem}</p>
+              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400">{t("problem")}</p>
+              <p className="mt-0.5 leading-relaxed text-gray-600">{formValues.problem}</p>
             </div>
             <div>
-              <p className="font-medium text-gray-500">{t("targetUser")}</p>
-              <p className="text-gray-700">{formValues.target_user}</p>
+              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400">{t("targetUser")}</p>
+              <p className="mt-0.5 leading-relaxed text-gray-600">{formValues.target_user}</p>
             </div>
             <div>
-              <p className="font-medium text-gray-500">{t("solution")}</p>
-              <p className="text-gray-700">{formValues.solution}</p>
+              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400">{t("solution")}</p>
+              <p className="mt-0.5 leading-relaxed text-gray-600">{formValues.solution}</p>
             </div>
             <div>
-              <p className="font-medium text-gray-500">{t("monetization")}</p>
-              <p className="text-gray-700">{formValues.monetization}</p>
+              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400">{t("monetization")}</p>
+              <p className="mt-0.5 leading-relaxed text-gray-600">{formValues.monetization}</p>
             </div>
             <div>
-              <p className="font-medium text-gray-500">{t("industry")}</p>
-              <p className="text-gray-700">
+              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400">{t("industry")}</p>
+              <p className="mt-0.5 text-gray-600">
                 {formValues.industry && (ti.has(formValues.industry) ? ti(formValues.industry) : formValues.industry)}
               </p>
             </div>

@@ -19,7 +19,7 @@ export function SignupForm() {
   return (
     <form action={formAction} className="space-y-4">
       {state?.error && (
-        <div className="rounded-lg bg-red-50 p-3 text-sm text-red-600">
+        <div className="rounded-xl bg-red-50 p-3 text-[13px] text-red-600">
           {state?.error}
         </div>
       )}
@@ -49,9 +49,9 @@ export function SignupForm() {
         {isPending ? "..." : t("signup")}
       </Button>
 
-      <p className="text-center text-sm text-gray-600">
+      <p className="text-center text-[13px] text-gray-500">
         {t("hasAccount")}{" "}
-        <Link href="/login" className="font-medium text-emerald-600 hover:text-emerald-500">
+        <Link href="/login" className="font-medium text-brand-600 hover:text-brand-500">
           {t("login")}
         </Link>
       </p>

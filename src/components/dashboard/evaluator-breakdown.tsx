@@ -16,20 +16,20 @@ interface EvaluatorBreakdownProps {
 
 function BarChart({ items, total }: { items: BreakdownItem[]; total: number }) {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2.5">
       {items.map((item) => {
         const percent = total > 0 ? Math.round((item.count / total) * 100) : 0;
         return (
           <div key={item.label} className="space-y-1">
-            <div className="flex justify-between text-xs">
-              <span className="text-gray-600">{item.label}</span>
-              <span className="font-medium text-gray-900">
+            <div className="flex justify-between text-[12px]">
+              <span className="text-gray-500">{item.label}</span>
+              <span className="font-medium tabular-nums text-gray-700">
                 {item.count} ({percent}%)
               </span>
             </div>
-            <div className="h-1.5 overflow-hidden rounded-full bg-gray-100">
+            <div className="h-1 overflow-hidden rounded-full bg-gray-100">
               <div
-                className="h-full rounded-full bg-emerald-400"
+                className="h-full rounded-full bg-gradient-to-r from-brand-500 to-brand-400 transition-all duration-500"
                 style={{ width: `${percent}%` }}
               />
             </div>
@@ -54,13 +54,13 @@ export function EvaluatorBreakdown({
       </CardHeader>
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
-          <p className="mb-3 text-xs font-medium text-gray-500 uppercase">
+          <p className="mb-3 text-[11px] font-medium tracking-wider text-gray-400 uppercase">
             {t("byIndustry")}
           </p>
           <BarChart items={byIndustry} total={total} />
         </div>
         <div>
-          <p className="mb-3 text-xs font-medium text-gray-500 uppercase">
+          <p className="mb-3 text-[11px] font-medium tracking-wider text-gray-400 uppercase">
             {t("byExperience")}
           </p>
           <BarChart items={byExperience} total={total} />

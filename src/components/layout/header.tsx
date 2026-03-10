@@ -25,30 +25,30 @@ export function Header({ isAuthenticated }: HeaderProps) {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
         <Link href="/" className="flex items-center">
-          <Logo size="sm" textClassName="text-emerald-600" />
+          <Logo size="sm" />
         </Link>
 
         <div className="flex items-center gap-4">
           {isAuthenticated && (
-            <nav className="hidden items-center gap-4 text-sm sm:flex">
+            <nav className="hidden items-center gap-5 text-[13px] sm:flex">
               <Link
                 href="/evaluate"
-                className="text-gray-600 transition-colors hover:text-gray-900"
+                className="font-medium text-gray-500 transition-colors hover:text-gray-900"
               >
                 {t("evaluate")}
               </Link>
               <Link
                 href="/submit"
-                className="text-gray-600 transition-colors hover:text-gray-900"
+                className="font-medium text-gray-500 transition-colors hover:text-gray-900"
               >
                 {t("submitIdea")}
               </Link>
               <Link
                 href="/dashboard"
-                className="text-gray-600 transition-colors hover:text-gray-900"
+                className="font-medium text-gray-500 transition-colors hover:text-gray-900"
               >
                 {t("dashboard")}
               </Link>

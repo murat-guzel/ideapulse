@@ -44,18 +44,18 @@ export function CommentThemes({ themes: rawThemes }: CommentThemesProps) {
       <CardHeader>
         <CardTitle>{t("commentThemes")}</CardTitle>
       </CardHeader>
-      <div className="space-y-3">
+      <div className="space-y-2">
         {themes.map((theme, i) => (
           <div
             key={i}
-            className="flex items-start gap-3 rounded-lg border border-gray-100 p-3"
+            className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50/50 p-3.5"
           >
             <Badge variant={sentimentVariant(theme.sentiment)}>
               {theme.sentiment}
             </Badge>
-            <div>
-              <p className="text-sm font-medium text-gray-900">{theme.label}</p>
-              <p className="text-xs text-gray-600">{theme.summary}</p>
+            <div className="min-w-0">
+              <p className="text-[13px] font-medium text-gray-900">{theme.label}</p>
+              <p className="mt-0.5 text-[12px] leading-relaxed text-gray-500">{theme.summary}</p>
             </div>
           </div>
         ))}

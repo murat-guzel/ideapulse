@@ -29,21 +29,21 @@ export function LandingNav() {
       className={cn(
         "fixed top-0 right-0 left-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/90 shadow-sm backdrop-blur-xl border-b border-gray-100"
+          ? "bg-white/80 shadow-sm shadow-gray-950/[0.03] backdrop-blur-xl border-b border-gray-100"
           : "bg-transparent"
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2.5">
           <LogoIcon />
           <span
             className={cn(
-              "text-lg font-bold tracking-tight transition-colors",
+              "text-lg font-semibold tracking-tight transition-colors",
               scrolled ? "text-gray-900" : "text-white"
             )}
           >
-            IdeaPulse
+            Idea<span className={scrolled ? "text-brand-600" : "text-brand-400"}>Pulse</span>
           </span>
         </Link>
 
@@ -99,7 +99,7 @@ export function LandingNav() {
           </Link>
           <Link
             href="/signup"
-            className="rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-500 hover:shadow-md"
+            className="rounded-full bg-brand-600 px-5 py-2 text-sm font-medium text-white shadow-sm shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-md hover:shadow-brand-500/25"
           >
             {t("signup")}
           </Link>

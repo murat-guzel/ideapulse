@@ -14,30 +14,32 @@ export function ScoreCard({ label, score, maxScore = 10 }: ScoreCardProps) {
     score === null
       ? "text-gray-400"
       : score >= 6.5
-        ? "text-green-600"
+        ? "text-emerald-600"
         : score >= 4
           ? "text-amber-600"
           : "text-red-600";
 
+  const barColor =
+    score === null
+      ? "bg-gray-200"
+      : score >= 6.5
+        ? "bg-gradient-to-r from-emerald-500 to-emerald-400"
+        : score >= 4
+          ? "bg-gradient-to-r from-amber-500 to-amber-400"
+          : "bg-gradient-to-r from-red-500 to-red-400";
+
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-4">
-      <p className="mb-2 text-xs font-medium text-gray-500 uppercase tracking-wide">
+    <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm shadow-gray-950/[0.03]">
+      <p className="mb-2 text-[11px] font-medium text-gray-500 uppercase tracking-wider">
         {label}
       </p>
-      <p className={cn("text-3xl font-bold", color)}>
+      <p className={cn("text-3xl font-bold tracking-tight", color)}>
         {displayScore}
-        <span className="text-sm font-normal text-gray-400">/{maxScore}</span>
+        <span className="text-sm font-normal text-gray-300">/{maxScore}</span>
       </p>
-      <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-gray-100">
+      <div className="mt-3 h-1 overflow-hidden rounded-full bg-gray-100">
         <div
-          className={cn(
-            "h-full rounded-full transition-all duration-500",
-            score !== null && score >= 6.5
-              ? "bg-green-500"
-              : score !== null && score >= 4
-                ? "bg-amber-500"
-                : "bg-red-500"
-          )}
+          className={cn("h-full rounded-full transition-all duration-500", barColor)}
           style={{ width: `${percent}%` }}
         />
       </div>

@@ -38,15 +38,15 @@ export function EvaluateClient({
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">{t("title")}</h1>
-        <p className="mt-1 text-sm text-gray-600">{t("subtitle")}</p>
+        <h1 className="text-xl font-semibold tracking-tight text-gray-900">{t("title")}</h1>
+        <p className="mt-1 text-[13px] text-gray-500">{t("subtitle")}</p>
       </div>
 
       <ProgressTracker completed={progress} />
 
       {showThankYou ? (
-        <div className="rounded-xl border border-green-200 bg-green-50 p-8 text-center">
-          <p className="text-lg font-medium text-green-700">{t("thankYou")}</p>
+        <div className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-8 text-center">
+          <p className="text-base font-medium text-emerald-700">{t("thankYou")}</p>
         </div>
       ) : currentIdea ? (
         <div className="space-y-6">

@@ -14,16 +14,18 @@ export default async function LoginPage({
   const t = await getTranslations("auth");
 
   return (
-    <main className="flex min-h-screen items-center justify-center px-4">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <div className="mb-2">
-            <Logo size="sm" textClassName="text-emerald-600" />
-          </div>
-          <CardTitle>{t("login")}</CardTitle>
-        </CardHeader>
-        <LoginForm />
-      </Card>
+    <main className="flex min-h-screen items-center justify-center bg-gray-50/80 px-4">
+      <div className="w-full max-w-[400px]">
+        <div className="mb-8 flex justify-center">
+          <Logo size="md" />
+        </div>
+        <Card className="shadow-sm shadow-gray-950/[0.04]">
+          <CardHeader>
+            <CardTitle className="text-lg">{t("login")}</CardTitle>
+          </CardHeader>
+          <LoginForm />
+        </Card>
+      </div>
     </main>
   );
 }

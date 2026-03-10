@@ -48,41 +48,39 @@ export default async function IdeaDetailPage({
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-start justify-between">
-        <div>
-          <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-bold text-gray-900">{idea.title}</h1>
-            <IdeaStatusBadge
-              status={idea.status}
-              scoreOverall={scores.scoreOverall}
-            />
-          </div>
-          {idea.ai_summary && (
-            <p className="mt-1 text-sm text-gray-600">{idea.ai_summary}</p>
+      <div>
+        <div className="flex items-center gap-3">
+          <h1 className="text-xl font-semibold tracking-tight text-gray-900">{idea.title}</h1>
+          <IdeaStatusBadge
+            status={idea.status}
+            scoreOverall={scores.scoreOverall}
+          />
+        </div>
+        {idea.ai_summary && (
+          <p className="mt-1.5 text-[13px] leading-relaxed text-gray-500">{idea.ai_summary}</p>
+        )}
+        <div className="mt-2 flex items-center gap-4 text-[12px] text-gray-400">
+          <span>{t("evaluations", { count: scores.evaluationCount })}</span>
+          <span>
+            {t("confidence", {
+              percent: Math.round(scores.confidence * 100),
+            })}
+          </span>
+          {idea.status === "active" && (
+            <TimeRemaining expiresAt={idea.expires_at} />
           )}
-          <div className="mt-2 flex items-center gap-4 text-sm text-gray-500">
-            <span>{t("evaluations", { count: scores.evaluationCount })}</span>
-            <span>
-              {t("confidence", {
-                percent: Math.round(scores.confidence * 100),
-              })}
-            </span>
-            {idea.status === "active" && (
-              <TimeRemaining expiresAt={idea.expires_at} />
-            )}
-          </div>
         </div>
       </div>
 
       {/* Overall signal */}
-      <Card className="text-center py-6">
-        <p className="text-sm text-gray-500 uppercase tracking-wide">
+      <Card className="text-center py-8">
+        <p className="text-[11px] font-medium text-gray-400 uppercase tracking-wider">
           {t("overallScore")}
         </p>
-        <p className="mt-1 text-5xl font-bold text-emerald-600">
+        <p className="mt-2 text-5xl font-bold tracking-tight text-brand-600">
           {scores.scoreOverall.toFixed(1)}
         </p>
-        <p className="mt-2 text-sm font-medium">
+        <p className="mt-2 text-[13px] font-medium text-gray-500">
           {scores.scoreOverall > 0
             ? getSignalLabel(scores.scoreOverall) === "strong"
               ? t("signalStrong")

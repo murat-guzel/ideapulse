@@ -14,11 +14,11 @@ export function SubmissionGate({ completed }: SubmissionGateProps) {
   const remaining = EVAL_REQUIRED - completed;
 
   return (
-    <Card className="space-y-4 text-center">
-      <p className="text-lg font-medium text-gray-900">
+    <Card className="space-y-4 text-center py-8">
+      <p className="text-base font-medium text-gray-900">
         {t("gate", { remaining })}
       </p>
-      <p className="text-sm text-gray-500">
+      <p className="text-[13px] text-gray-500">
         {t("gateDesc", { count: completed, total: EVAL_REQUIRED })}
       </p>
       <ProgressBar value={completed} max={EVAL_REQUIRED} />

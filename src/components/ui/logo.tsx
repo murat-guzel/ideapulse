@@ -6,22 +6,22 @@ interface LogoIconProps {
 }
 
 /**
- * IdeaPulse Logo — a lightbulb with a pulse/heartbeat line through the center.
- * Represents "Idea" (lightbulb) + "Pulse" (heartbeat signal).
+ * IdeaPulse Logo — clean lightbulb + heartbeat pulse line.
+ * "Idea" (lightbulb) + "Pulse" (heartbeat).
  */
 export function LogoIcon({ size = "md", className }: LogoIconProps) {
   const sizeMap = {
-    sm: "h-6 w-6",
+    sm: "h-7 w-7",
     md: "h-8 w-8",
     lg: "h-10 w-10",
   };
 
-  const iconSize = { sm: 14, md: 18, lg: 22 };
+  const iconSize = { sm: 16, md: 18, lg: 22 };
 
   return (
     <div
       className={cn(
-        "flex items-center justify-center rounded-xl bg-emerald-600",
+        "flex items-center justify-center rounded-[10px] bg-gradient-to-br from-brand-500 to-brand-700 shadow-sm shadow-brand-600/20",
         sizeMap[size],
         className
       )}
@@ -33,25 +33,25 @@ export function LogoIcon({ size = "md", className }: LogoIconProps) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Lightbulb outer shape */}
+        {/* Lightbulb shape — subtle background */}
         <path
-          d="M16 3C11.03 3 7 7.03 7 12c0 3.2 1.67 6.01 4.19 7.61.37.24.61.65.61 1.09V22c0 .55.45 1 1 1h6.4c.55 0 1-.45 1-1v-1.3c0-.44.24-.85.61-1.09C23.33 18.01 25 15.2 25 12c0-4.97-4.03-9-9-9z"
+          d="M16 4C11.58 4 8 7.58 8 12c0 2.9 1.52 5.45 3.8 6.9.34.22.5.6.5 1v1.6c0 .28.22.5.5.5h6.4c.28 0 .5-.22.5-.5v-1.6c0-.4.16-.78.5-1C22.48 17.45 24 14.9 24 12c0-4.42-3.58-8-8-8z"
           fill="white"
-          opacity="0.25"
+          opacity="0.2"
         />
-        {/* Pulse line through the bulb */}
+        {/* Pulse heartbeat line */}
         <path
-          d="M4 16h5l2.5-5 3 10 3-10 2.5 5H28"
+          d="M5 16h5.5l2-4.5 3 9 3-9 2 4.5H26"
           stroke="white"
-          strokeWidth="2.2"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        {/* Bulb base lines */}
+        {/* Bulb base */}
         <path
-          d="M12.5 26h7M13.5 29h5"
+          d="M13 25h6M14 28h4"
           stroke="white"
-          strokeWidth="1.8"
+          strokeWidth="1.5"
           strokeLinecap="round"
         />
       </svg>
@@ -72,20 +72,25 @@ export function Logo({
   textClassName,
   className,
 }: LogoProps) {
-  const textSize = { sm: "text-base", md: "text-lg", lg: "text-xl" };
+  const textSize = {
+    sm: "text-[15px]",
+    md: "text-lg",
+    lg: "text-xl",
+  };
 
   return (
-    <div className={cn("flex items-center gap-2", className)}>
+    <div className={cn("flex items-center gap-2.5", className)}>
       <LogoIcon size={size} />
       {showText && (
         <span
           className={cn(
-            "font-bold tracking-tight",
+            "font-semibold tracking-tight",
             textSize[size],
             textClassName
           )}
         >
-          IdeaPulse
+          Idea
+          <span className="text-brand-600">Pulse</span>
         </span>
       )}
     </div>
