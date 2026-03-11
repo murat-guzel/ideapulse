@@ -1,4 +1,4 @@
-export const EVAL_REQUIRED = 15;
+export const EVAL_REQUIRED = 5;
 export const IDEA_LIFETIME_HOURS = 48;
 export const MAX_COMMENT_LENGTH = 500;
 export const MAX_EVALUATIONS_PER_HOUR = 60;
