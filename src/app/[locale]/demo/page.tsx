@@ -169,7 +169,7 @@ export default async function DemoPage({
   const ti = await getTranslations("industries");
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-warm-bg">
       {/* Demo header */}
       <div className="border-b bg-white">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">

@@ -60,7 +60,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="min-h-screen bg-gray-50 font-sans text-gray-900 antialiased">
+      <body className="min-h-screen bg-warm-bg font-sans text-gray-900 antialiased">
         <NextIntlClientProvider>
           {children}
         </NextIntlClientProvider>

@@ -144,11 +144,11 @@ export default async function LandingPage({
         </div>
 
         {/* Bottom fade to white */}
-        <div className="h-32 bg-gradient-to-b from-transparent to-gray-50" />
+        <div className="h-32 bg-gradient-to-b from-transparent to-warm-bg" />
       </section>
 
       {/* ===== STATS BAR ===== */}
-      <section className="bg-gray-50 py-12">
+      <section className="bg-warm-bg py-12">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {([1, 2, 3, 4] as const).map((i) => (
@@ -200,7 +200,7 @@ export default async function LandingPage({
       </section>
 
       {/* ===== FEATURES ===== */}
-      <section className="bg-gray-50 px-4 py-24 sm:py-28">
+      <section className="bg-warm-bg px-4 py-24 sm:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-16 max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">

@@ -1,23 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — refined emerald */
-  --color-brand-50: #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
+  /* Brand palette — Soft Indigo */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+
+  /* Warm background */
+  --color-warm-bg: #fafaf8;
 
   /* Dark surfaces */
-  --color-dark: #09090b;
-  --color-dark-card: #0f0f12;
-  --color-dark-border: #1a1a20;
+  --color-dark: #0c0a1d;
+  --color-dark-card: #110f24;
+  --color-dark-border: #1c1a33;
 
   /* Wire Geist as default font */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
@@ -35,7 +38,6 @@
     font-feature-settings: "ss01", "ss02", "cv01";
   }
 
-  /* Better default focus ring */
   *:focus-visible {
     outline: 2px solid var(--color-brand-500);
     outline-offset: 2px;
@@ -45,20 +47,20 @@
 @layer utilities {
   /* ===== LANDING — HERO ===== */
   .hero-gradient {
-    background: linear-gradient(145deg, #09090b 0%, #022c22 45%, #064e3b 60%, #09090b 100%);
+    background: linear-gradient(145deg, #0c0a1d 0%, #1e1b4b 40%, #312e81 60%, #0c0a1d 100%);
   }
 
   .hero-glow {
     background: radial-gradient(
       ellipse 70% 50% at 50% 40%,
-      rgba(16, 185, 129, 0.12) 0%,
-      rgba(16, 185, 129, 0.04) 40%,
+      rgba(99, 102, 241, 0.15) 0%,
+      rgba(99, 102, 241, 0.05) 40%,
       transparent 70%
     );
   }
 
   .cta-gradient {
-    background: linear-gradient(145deg, #064e3b 0%, #09090b 100%);
+    background: linear-gradient(145deg, #1e1b4b 0%, #0c0a1d 100%);
   }
 
   .card-shine {
@@ -85,30 +87,30 @@
 
   .stat-card:hover {
     background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(16, 185, 129, 0.25);
+    border-color: rgba(99, 102, 241, 0.25);
     transform: translateY(-2px);
   }
 
   .feature-card {
     background: #fff;
-    border: 1px solid #f0f0f0;
+    border: 1px solid rgba(0, 0, 0, 0.06);
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .feature-card:hover {
-    border-color: rgba(5, 150, 105, 0.25);
-    box-shadow: 0 12px 40px -8px rgba(5, 150, 105, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+    border-color: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 12px 40px -8px rgba(99, 102, 241, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
     transform: translateY(-3px);
   }
 
   .step-card {
     background: #fff;
-    border: 1px solid #f0f0f0;
+    border: 1px solid rgba(0, 0, 0, 0.06);
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .step-card:hover {
-    box-shadow: 0 16px 48px -12px rgba(0, 0, 0, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 16px 48px -12px rgba(99, 102, 241, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
     transform: translateY(-3px);
   }
 

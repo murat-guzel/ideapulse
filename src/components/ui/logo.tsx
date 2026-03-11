@@ -6,8 +6,8 @@ interface LogoIconProps {
 }
 
 /**
- * IdeaPulse Logo — clean lightbulb + heartbeat pulse line.
- * "Idea" (lightbulb) + "Pulse" (heartbeat).
+ * IdeaPulse Logo — Abstract geometric pulse wave inside a rounded square.
+ * Minimal, no lightbulb. Just a clean signal/pulse mark.
  */
 export function LogoIcon({ size = "md", className }: LogoIconProps) {
   const sizeMap = {
@@ -21,7 +21,7 @@ export function LogoIcon({ size = "md", className }: LogoIconProps) {
   return (
     <div
       className={cn(
-        "flex items-center justify-center rounded-[10px] bg-gradient-to-br from-brand-500 to-brand-700 shadow-sm shadow-brand-600/20",
+        "flex items-center justify-center rounded-[10px] bg-brand-600",
         sizeMap[size],
         className
       )}
@@ -29,30 +29,17 @@ export function LogoIcon({ size = "md", className }: LogoIconProps) {
       <svg
         width={iconSize[size]}
         height={iconSize[size]}
-        viewBox="0 0 32 32"
+        viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Lightbulb shape — subtle background */}
+        {/* Abstract pulse wave — minimal signal mark */}
         <path
-          d="M16 4C11.58 4 8 7.58 8 12c0 2.9 1.52 5.45 3.8 6.9.34.22.5.6.5 1v1.6c0 .28.22.5.5.5h6.4c.28 0 .5-.22.5-.5v-1.6c0-.4.16-.78.5-1C22.48 17.45 24 14.9 24 12c0-4.42-3.58-8-8-8z"
-          fill="white"
-          opacity="0.2"
-        />
-        {/* Pulse heartbeat line */}
-        <path
-          d="M5 16h5.5l2-4.5 3 9 3-9 2 4.5H26"
+          d="M2 12h4l2-5 3 10 3-10 2 5h6"
           stroke="white"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
-        {/* Bulb base */}
-        <path
-          d="M13 25h6M14 28h4"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
         />
       </svg>
     </div>

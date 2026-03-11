@@ -99,7 +99,7 @@ export function ProfileForm() {
                 type="checkbox"
                 name="interests"
                 value={ind}
-                className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                className="rounded border-gray-300 text-brand-600 focus:ring-brand-500"
               />
               {ti(ind)}
             </label>

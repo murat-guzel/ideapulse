@@ -27,7 +27,7 @@ export function TimeRemaining({ expiresAt }: TimeRemainingProps) {
   }
 
   return (
-    <span className="text-sm font-medium text-emerald-600">
+    <span className="text-sm font-medium text-brand-600">
       {t("timeRemaining", { hours: time.hours, minutes: time.minutes })}
     </span>
   );

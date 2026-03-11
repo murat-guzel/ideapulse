@@ -14,7 +14,7 @@ export default async function LoginPage({
   const t = await getTranslations("auth");
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-50/80 px-4">
+    <main className="flex min-h-screen items-center justify-center bg-warm-bg px-4">
       <div className="w-full max-w-[400px]">
         <div className="mb-8 flex justify-center">
           <Logo size="md" />
