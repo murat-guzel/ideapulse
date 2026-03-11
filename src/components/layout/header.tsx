@@ -2,7 +2,6 @@
 
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { LocaleSwitcher } from "./locale-switcher";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
@@ -54,7 +53,6 @@ export function Header({ isAuthenticated }: HeaderProps) {
               </Link>
             </nav>
           )}
-          <LocaleSwitcher />
           {isAuthenticated && (
             <Button variant="ghost" size="sm" onClick={handleSignOut}>
               {t("signOut")}

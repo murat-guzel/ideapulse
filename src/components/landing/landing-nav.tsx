@@ -1,15 +1,12 @@
 "use client";
 
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { LogoIcon } from "@/components/ui/logo";
 
 export function LandingNav() {
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
   const t = useTranslations("landing");
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -19,10 +16,6 @@ export function LandingNav() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  function switchLocale(newLocale: "en" | "tr") {
-    router.replace(pathname, { locale: newLocale });
-  }
 
   return (
     <nav
@@ -49,43 +42,6 @@ export function LandingNav() {
 
         {/* Desktop Right */}
         <div className="hidden items-center gap-3 md:flex">
-          {/* Locale Switcher */}
-          <div
-            className={cn(
-              "flex items-center gap-0.5 rounded-full p-0.5 text-xs",
-              scrolled
-                ? "border border-gray-200 bg-gray-50"
-                : "border border-white/20 bg-white/10"
-            )}
-          >
-            <button
-              onClick={() => switchLocale("en")}
-              className={cn(
-                "rounded-full px-2.5 py-1 font-medium transition-all",
-                locale === "en"
-                  ? "bg-brand-600 text-white"
-                  : scrolled
-                    ? "text-gray-500 hover:text-gray-900"
-                    : "text-white/60 hover:text-white"
-              )}
-            >
-              EN
-            </button>
-            <button
-              onClick={() => switchLocale("tr")}
-              className={cn(
-                "rounded-full px-2.5 py-1 font-medium transition-all",
-                locale === "tr"
-                  ? "bg-brand-600 text-white"
-                  : scrolled
-                    ? "text-gray-500 hover:text-gray-900"
-                    : "text-white/60 hover:text-white"
-              )}
-            >
-              TR
-            </button>
-          </div>
-
           <Link
             href="/login"
             className={cn(
@@ -141,26 +97,6 @@ export function LandingNav() {
             >
               {t("signup")}
             </Link>
-            <div className="flex items-center gap-2 pt-2">
-              <button
-                onClick={() => switchLocale("en")}
-                className={cn(
-                  "rounded-full px-3 py-1.5 text-xs font-medium",
-                  locale === "en" ? "bg-brand-600 text-white" : "bg-gray-100 text-gray-600"
-                )}
-              >
-                EN
-              </button>
-              <button
-                onClick={() => switchLocale("tr")}
-                className={cn(
-                  "rounded-full px-3 py-1.5 text-xs font-medium",
-                  locale === "tr" ? "bg-brand-600 text-white" : "bg-gray-100 text-gray-600"
-                )}
-              >
-                TR
-              </button>
-            </div>
           </div>
         </div>
       )}
