@@ -1,7 +1,7 @@
 {
   "common": {
     "appName": "IdeaPulse",
-    "tagline": "48 Saatte Fikir Dogrulama Motoru",
+    "tagline": "24 Saatte Fikir Dogrulama Motoru",
     "submit": "Gonder",
     "cancel": "Iptal",
     "loading": "Yukleniyor...",
@@ -91,7 +91,7 @@
   },
   "submit": {
     "title": "Fikrini Gonder",
-    "subtitle": "Fikrini tanimla ve 48 saat icinde gercek insanlardan dogrulama al.",
+    "subtitle": "Fikrini tanimla ve 24 saat icinde gercek insanlardan dogrulama al.",
     "gate": "Gonderimi acmak icin {remaining} degerlendirme daha tamamla",
     "gateDesc": "{total} fikirden {count} tanesini degerlendirdin.",
     "step1": "Problem",
@@ -121,7 +121,7 @@
     "back": "Geri",
     "submitIdea": "Fikri Gonder",
     "success": "Fikir gonderildi!",
-    "successDesc": "Fikrin artik 48 saat boyunca yayinda. Sonuclari panelinden takip et."
+    "successDesc": "Fikrin artik 24 saat boyunca yayinda. Sonuclari panelinden takip et."
   },
   "dashboard": {
     "title": "Fikirlerin",
@@ -146,16 +146,16 @@
     "signalNone": "Net Talep Yok"
   },
   "landing": {
-    "badge": "48 Saatte Gercek Dogrulama Motoru",
+    "badge": "24 Saatte Gercek Dogrulama Motoru",
     "heroLine1": "Her startup fikrini",
     "heroLine2": "dogrulanmis bir sinyale donustur",
     "heroSub": "Gercek kurucular ve gelistiricilerden yapilandirilmis geri bildirim al. Reklam yok, onyargi yok, maliyet yok. Topluluk ve yapay zeka destekli durust dogrulama.",
     "ctaPrimary": "Ucretsiz Basla",
     "ctaSecondary": "Nasil Calistigini Gor",
     "trustedBy": "Dunya genelinde kurucular tarafindan tercih ediliyor",
-    "stat1Value": "48s",
+    "stat1Value": "24s",
     "stat1Label": "Ortalama dogrulama suresi",
-    "stat2Value": "15",
+    "stat2Value": "5",
     "stat2Label": "Fikir basina degerlendirme",
     "stat3Value": "100%",
     "stat3Label": "Sonsuza kadar ucretsiz",
@@ -163,11 +163,11 @@
     "stat4Label": "Yapilandirilmis puan boyutu",
     "howTitle": "Nasil calisiyor?",
     "howSubtitle": "Fikrini gercek insan geri bildirimiyle dogrulamak icin uc basit adim",
-    "step1Title": "15 fikir degerlendir",
+    "step1Title": "5 fikir degerlendir",
     "step1Desc": "Diger kuruculara yapilandirilmis geri bildirim vererek yardim et. Problem yogunlugunu, odeme niyetini ve farklilasmayi puanla.",
     "step2Title": "Fikrini gonder",
     "step2Desc": "Fikrini rehberli formatta tanimla. Yapay zeka degerlendirmeciler icin net bir ozet olusturur.",
-    "step3Title": "48 saatte dogrulama al",
+    "step3Title": "24 saatte dogrulama al",
     "step3Desc": "Gercek insanlardan agirlikli puanlar, geri bildirim temalari ve degerlendirici dagilimlari al.",
     "featTitle": "Dogrulama icin ihtiyacin olan her sey",
     "featSubtitle": "Gurultu degil, sinyal isteyen kurucular icin tasarlandi",
@@ -181,8 +181,8 @@
     "feat4Desc": "Fikrini canli puanlar, yorum temalari ve degerlendirici dagilimlariyla takip et.",
     "feat5Title": "Topluluk Odakli",
     "feat5Desc": "Karsilikli model, her degerlendirmecinin startup zorluklarini anlayan bir kurucu olmesini saglar.",
-    "feat6Title": "48 Saatlik Yasam Dongusu",
-    "feat6Desc": "Fikirler 48 saat sonra otomatik olarak sona erer, aciliyet yaratir ve taze, zamaninda geri bildirim saglar.",
+    "feat6Title": "24 Saatlik Yasam Dongusu",
+    "feat6Desc": "Fikirler 24 saat sonra otomatik olarak sona erer, aciliyet yaratir ve taze, zamaninda geri bildirim saglar.",
     "ctaTitle": "Fikrini dogrulamaya hazir misin?",
     "ctaSub": "Gercek dogrulamaya inanan bir kurucu topluluouna katil. Fikirleri degerlendirmeye basla ve kendi gonderimini ac.",
     "ctaButton": "Simdi Dogrulamaya Basla",

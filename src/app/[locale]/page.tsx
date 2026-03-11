@@ -265,7 +265,7 @@ export default async function LandingPage({
               <p className="text-[13px] leading-relaxed text-gray-500">{t("feat5Desc")}</p>
             </div>
 
-            {/* Feature 6: 48h Lifecycle */}
+            {/* Feature 6: 24h Lifecycle */}
             <div className="feature-card rounded-2xl p-6">
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-teal-50 text-teal-600 ring-1 ring-teal-100">
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">

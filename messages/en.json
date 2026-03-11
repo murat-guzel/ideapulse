@@ -1,7 +1,7 @@
 {
   "common": {
     "appName": "IdeaPulse",
-    "tagline": "48-Hour Real Validation Engine",
+    "tagline": "24-Hour Real Validation Engine",
     "submit": "Submit",
     "cancel": "Cancel",
     "loading": "Loading...",
@@ -91,7 +91,7 @@
   },
   "submit": {
     "title": "Submit Your Idea",
-    "subtitle": "Describe your idea and get validated by real people in 48 hours.",
+    "subtitle": "Describe your idea and get validated by real people in 24 hours.",
     "gate": "Complete {remaining} more evaluations to unlock submission",
     "gateDesc": "You've evaluated {count} of {total} ideas.",
     "step1": "Problem",
@@ -121,7 +121,7 @@
     "back": "Back",
     "submitIdea": "Submit Idea",
     "success": "Idea submitted!",
-    "successDesc": "Your idea is now live for 48 hours. Check your dashboard for results."
+    "successDesc": "Your idea is now live for 24 hours. Check your dashboard for results."
   },
   "dashboard": {
     "title": "Your Ideas",
@@ -146,16 +146,16 @@
     "signalNone": "No Clear Demand"
   },
   "landing": {
-    "badge": "48-Hour Real Validation Engine",
+    "badge": "24-Hour Real Validation Engine",
     "heroLine1": "Turn every startup idea",
     "heroLine2": "into a validated signal",
     "heroSub": "Get structured feedback from real founders and builders. No ads, no bias, no cost. Just honest validation powered by community and AI.",
     "ctaPrimary": "Get Started Free",
     "ctaSecondary": "See How It Works",
     "trustedBy": "Trusted by founders worldwide",
-    "stat1Value": "48h",
+    "stat1Value": "24h",
     "stat1Label": "Average validation time",
-    "stat2Value": "15",
+    "stat2Value": "5",
     "stat2Label": "Evaluations per idea",
     "stat3Value": "100%",
     "stat3Label": "Free forever",
@@ -163,11 +163,11 @@
     "stat4Label": "Structured score dimensions",
     "howTitle": "How it works",
     "howSubtitle": "Three simple steps to validate your idea with real human feedback",
-    "step1Title": "Evaluate 15 ideas",
+    "step1Title": "Evaluate 5 ideas",
     "step1Desc": "Help other founders by giving structured feedback on their ideas. Rate problem intensity, payment intent, and differentiation.",
     "step2Title": "Submit your idea",
     "step2Desc": "Describe your idea in a guided format. AI generates a clear summary for evaluators to review.",
-    "step3Title": "Get validated in 48h",
+    "step3Title": "Get validated in 24h",
     "step3Desc": "Receive weighted scores, feedback themes, and evaluator breakdowns from real people.",
     "featTitle": "Everything you need to validate",
     "featSubtitle": "Built for founders who want signal, not noise",
@@ -181,8 +181,8 @@
     "feat4Desc": "Track your idea's validation progress with live scores, comment themes, and evaluator breakdowns.",
     "feat5Title": "Community-Driven",
     "feat5Desc": "Reciprocal model ensures every evaluator is also a builder who understands startup challenges.",
-    "feat6Title": "48-Hour Lifecycle",
-    "feat6Desc": "Ideas auto-expire after 48 hours, creating urgency and ensuring fresh, timely feedback.",
+    "feat6Title": "24-Hour Lifecycle",
+    "feat6Desc": "Ideas auto-expire after 24 hours, creating urgency and ensuring fresh, timely feedback.",
     "ctaTitle": "Ready to validate your idea?",
     "ctaSub": "Join a community of founders who believe in real validation. Start evaluating ideas and unlock your own submission.",
     "ctaButton": "Start Validating Now",
