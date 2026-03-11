@@ -17,6 +17,10 @@ export function LandingNav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <nav
       className={cn(
@@ -42,23 +46,23 @@ export function LandingNav() {
 
         {/* Desktop Right */}
         <div className="hidden items-center gap-3 md:flex">
-          <Link
-            href="/login"
+          <a
+            href="#how-it-works"
             className={cn(
               "rounded-full px-4 py-2 text-sm font-medium transition-colors",
               scrolled
-                ? "text-gray-700 hover:text-gray-900"
-                : "text-white/80 hover:text-white"
+                ? "text-gray-500 hover:text-gray-900"
+                : "text-white/70 hover:text-white"
             )}
           >
-            {t("login")}
-          </Link>
-          <Link
-            href="/signup"
+            How It Works
+          </a>
+          <button
+            onClick={scrollToTop}
             className="rounded-full bg-brand-600 px-5 py-2 text-sm font-medium text-white shadow-sm shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-md hover:shadow-brand-500/25"
           >
-            {t("signup")}
-          </Link>
+            {t("ctaPrimary")}
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -85,18 +89,19 @@ export function LandingNav() {
       {mobileOpen && (
         <div className="border-t border-gray-100 bg-white px-4 py-4 shadow-lg md:hidden">
           <div className="flex flex-col gap-3">
-            <Link
-              href="/login"
+            <a
+              href="#how-it-works"
               className="rounded-lg px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              onClick={() => setMobileOpen(false)}
             >
-              {t("login")}
-            </Link>
-            <Link
-              href="/signup"
+              How It Works
+            </a>
+            <button
+              onClick={() => { setMobileOpen(false); scrollToTop(); }}
               className="rounded-lg bg-brand-600 px-4 py-2.5 text-center text-sm font-semibold text-white"
             >
-              {t("signup")}
-            </Link>
+              {t("ctaPrimary")}
+            </button>
           </div>
         </div>
       )}

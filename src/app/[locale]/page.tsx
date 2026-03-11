@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
 import { LandingNav } from "@/components/landing/landing-nav";
+import { WaitlistForm } from "@/components/landing/waitlist-form";
 import { Logo } from "@/components/ui/logo";
 
 export default async function LandingPage({
@@ -56,22 +56,22 @@ export default async function LandingPage({
               {t("heroSub")}
             </p>
 
-            {/* CTAs */}
-            <div className="animate-fade-in-delay-3 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link
-                href="/signup"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-gray-900 shadow-lg shadow-white/10 transition-all hover:shadow-xl hover:shadow-white/15 active:scale-[0.98]"
-              >
-                {t("ctaPrimary")}
-                <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
+            {/* Waitlist CTA */}
+            <div className="animate-fade-in-delay-3 flex flex-col items-center gap-4">
+              <WaitlistForm
+                variant="hero"
+                placeholder={t("emailPlaceholder")}
+                buttonText={t("ctaPrimary")}
+                successText={t("waitlistSuccess")}
+              />
               <a
                 href="#how-it-works"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 px-8 py-3.5 text-sm font-medium text-white/80 transition-all hover:border-white/30 hover:bg-white/5 hover:text-white"
+                className="inline-flex items-center gap-2 text-sm font-medium text-white/60 transition-all hover:text-white/90"
               >
                 {t("ctaSecondary")}
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
               </a>
             </div>
           </div>
@@ -289,15 +289,14 @@ export default async function LandingPage({
           <p className="mx-auto mb-10 max-w-xl text-[15px] leading-relaxed text-gray-400 sm:text-base">
             {t("ctaSub")}
           </p>
-          <Link
-            href="/signup"
-            className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-gray-900 shadow-lg transition-all hover:shadow-xl active:scale-[0.98]"
-          >
-            {t("ctaButton")}
-            <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
+          <div className="flex justify-center">
+            <WaitlistForm
+              variant="hero"
+              placeholder={t("emailPlaceholder")}
+              buttonText={t("ctaButton")}
+              successText={t("waitlistSuccess")}
+            />
+          </div>
         </div>
       </section>
 
@@ -322,19 +321,12 @@ export default async function LandingPage({
               </h4>
               <ul className="space-y-3 text-[13px] text-gray-500">
                 <li>
-                  <Link href="/evaluate" className="transition-colors hover:text-gray-900">
-                    {tc("appName")}
-                  </Link>
+                  <a href="#how-it-works" className="transition-colors hover:text-gray-900">
+                    How It Works
+                  </a>
                 </li>
                 <li>
-                  <Link href="/signup" className="transition-colors hover:text-gray-900">
-                    {t("signup")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/login" className="transition-colors hover:text-gray-900">
-                    {t("login")}
-                  </Link>
+                  <span className="cursor-default">Pricing</span>
                 </li>
               </ul>
             </div>
