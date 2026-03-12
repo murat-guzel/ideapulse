@@ -32,10 +32,10 @@ export default async function LandingPage({
           }}
         />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-28 sm:px-6 sm:py-36 lg:px-8 lg:py-44">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-36 lg:px-8 lg:py-44">
           <div className="mx-auto max-w-3xl text-center">
-            {/* Badge */}
-            <div className="animate-fade-in-up mb-8 inline-flex items-center gap-2 rounded-full border border-brand-500/20 bg-brand-500/10 px-4 py-1.5 text-[13px] font-medium text-brand-400">
+            {/* Badge — hidden on mobile to save space */}
+            <div className="animate-fade-in-up mb-6 hidden items-center gap-2 rounded-full border border-brand-500/20 bg-brand-500/10 px-4 py-1.5 text-[13px] font-medium text-brand-400 sm:mb-8 sm:inline-flex">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
@@ -43,7 +43,7 @@ export default async function LandingPage({
             </div>
 
             {/* Headline */}
-            <h1 className="animate-fade-in-delay-1 mb-6 text-4xl font-bold leading-[1.1] tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="animate-fade-in-delay-1 mb-4 text-3xl font-bold leading-[1.1] tracking-tighter text-white sm:mb-6 sm:text-5xl md:text-6xl lg:text-7xl">
               {t("heroLine1")}
               <br />
               <span className="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">
@@ -52,12 +52,12 @@ export default async function LandingPage({
             </h1>
 
             {/* Subtitle */}
-            <p className="animate-fade-in-delay-2 mx-auto mb-12 max-w-lg text-[15px] leading-relaxed text-gray-400 sm:text-base">
+            <p className="animate-fade-in-delay-2 mx-auto mb-6 max-w-lg text-sm leading-relaxed text-gray-400 sm:mb-12 sm:text-base">
               {t("heroSub")}
             </p>
 
             {/* Waitlist CTA */}
-            <div className="animate-fade-in-delay-3 flex flex-col items-center gap-4">
+            <div className="animate-fade-in-delay-3 flex flex-col items-center gap-3 sm:gap-4">
               <WaitlistForm
                 variant="hero"
                 placeholder={t("emailPlaceholder")}
@@ -76,8 +76,8 @@ export default async function LandingPage({
             </div>
           </div>
 
-          {/* Dashboard Mockup */}
-          <div className="animate-fade-in-delay-3 mx-auto mt-20 max-w-4xl sm:mt-24">
+          {/* Dashboard Mockup — hidden on mobile */}
+          <div className="animate-fade-in-delay-3 mx-auto mt-20 hidden max-w-4xl sm:mt-24 sm:block">
             <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-1.5 shadow-2xl shadow-black/40 backdrop-blur-sm">
               <div className="rounded-xl bg-dark-card p-6">
                 {/* Mock browser bar */}
