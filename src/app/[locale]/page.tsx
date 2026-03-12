@@ -51,10 +51,21 @@ export default async function LandingPage({
               </span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="animate-fade-in-delay-2 mx-auto mb-6 max-w-lg text-sm leading-relaxed text-gray-400 sm:mb-12 sm:text-base">
-              {t("heroSub")}
-            </p>
+            {/* Benefits — concrete reasons to sign up */}
+            <div className="animate-fade-in-delay-2 mx-auto mb-6 flex flex-col items-center gap-2 text-sm text-gray-300 sm:mb-8 sm:flex-row sm:gap-6 sm:text-base">
+              <span className="flex items-center gap-2">
+                <svg className="h-4 w-4 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                {t("benefit1")}
+              </span>
+              <span className="flex items-center gap-2">
+                <svg className="h-4 w-4 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                {t("benefit2")}
+              </span>
+              <span className="flex items-center gap-2">
+                <svg className="h-4 w-4 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                {t("benefit3")}
+              </span>
+            </div>
 
             {/* Waitlist CTA */}
             <div className="animate-fade-in-delay-3 flex flex-col items-center gap-3 sm:gap-4">
@@ -64,15 +75,7 @@ export default async function LandingPage({
                 buttonText={t("ctaPrimary")}
                 successText={t("waitlistSuccess")}
               />
-              <a
-                href="#how-it-works"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white/60 transition-all hover:text-white/90"
-              >
-                {t("ctaSecondary")}
-                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </a>
+              <p className="text-xs text-white/30">{t("noSpam")}</p>
             </div>
           </div>
 
