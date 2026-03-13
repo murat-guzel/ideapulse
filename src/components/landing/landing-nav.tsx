@@ -57,12 +57,23 @@ export function LandingNav() {
           >
             How It Works
           </a>
-          <button
-            onClick={scrollToTop}
+          <Link
+            href="/login"
+            className={cn(
+              "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+              scrolled
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white/80 hover:text-white"
+            )}
+          >
+            {t("login")}
+          </Link>
+          <Link
+            href="/signup"
             className="rounded-full bg-brand-600 px-5 py-2 text-sm font-medium text-white shadow-sm shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-md hover:shadow-brand-500/25"
           >
-            {t("ctaPrimary")}
-          </button>
+            {t("signup")}
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -96,12 +107,18 @@ export function LandingNav() {
             >
               How It Works
             </a>
-            <button
-              onClick={() => { setMobileOpen(false); scrollToTop(); }}
+            <Link
+              href="/login"
+              className="rounded-lg px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              {t("login")}
+            </Link>
+            <Link
+              href="/signup"
               className="rounded-lg bg-brand-600 px-4 py-2.5 text-center text-sm font-semibold text-white"
             >
-              {t("ctaPrimary")}
-            </button>
+              {t("signup")}
+            </Link>
           </div>
         </div>
       )}
